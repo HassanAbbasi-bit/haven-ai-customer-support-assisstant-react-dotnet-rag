@@ -1,0 +1,740 @@
+{
+  "startedAtUtc": "2026-10-19T18:16:09.0548226+00:00",
+  "split": "Development",
+  "configHash": "576E3D0CB87C47103D400B5F18C3714F1A414AB00337D89D75255FCB833D923D:C46A9C68013B7FC4BB812207C1D10F1D5E0953C054CF27F8CE0976969DD8E7FF:0DB8917866BF65971A29783F9E151FEF6C33B3DD9B1E71C83253A584FD38E14F:18D4DECAC05E6DFE599110AE5F9AD986F3A66CA80D041824EB3A8F72F55C4379",
+  "model": "llama3.2:3b",
+  "embeddingModel": "all-minilm:22m",
+  "promptProfile": "source-json-v1",
+  "semanticGrading": "pending_manual_review",
+  "results": [
+    {
+      "id": "01",
+      "input": "Can I return an unopened lamp 20 days after delivery?",
+      "expectedFacts": "Eligible within 30 calendar days if non-defective; proof, packaging and accessories required",
+      "goldSources": [
+        "RET-01"
+      ],
+      "turns": [
+        {
+          "question": "Can I return an unopened lamp 20 days after delivery?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "No, unopened, non-defective products may be returned within 30 calendar days after delivery.",
+          "durationMs": 30076,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "ecd87a8e-86a6-40e7-a4f1-58dd54837493",
+              "messageId": "bd0c4789-4517-4e30-ba33-4d1a46a10fed",
+              "documentTitle": "Returns Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "RET-01",
+              "quote": "Unopened, non-defective products may be returned within 30 calendar days after\ndelivery.",
+              "claim": "No, unopened, non-defective products may be returned within 30 calendar days after delivery.",
+              "available": true,
+              "text": "### RET-01 - Standard return window\nUnopened, non-defective products may be returned within 30 calendar days after\ndelivery. A receipt or order confirmation is required. Products must include their\noriginal packaging and accessories. Gift cards are not returnable."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 30088,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "02",
+      "input": "Can I return an opened lamp just because I don't like it?",
+      "expectedFacts": "No change-of-mind return for opened items; distinguish defect exception",
+      "goldSources": [
+        "RET-02"
+      ],
+      "turns": [
+        {
+          "question": "Can I return an opened lamp just because I don't like it?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "No, opened products cannot be returned for change of mind.",
+          "durationMs": 14727,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "70de09cc-0b46-4a5b-a928-0b365fcf1afb",
+              "messageId": "2f644510-24f4-4252-a4d8-f52bf61076e9",
+              "documentTitle": "Returns Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "RET-02",
+              "quote": "Opened products cannot be returned for change of mind.",
+              "claim": "No, opened products cannot be returned for change of mind.",
+              "available": true,
+              "text": "### RET-02 - Opened products and defects\nOpened products cannot be returned for change of mind. If a product arrives defective\nor damaged, contact support within seven calendar days after delivery, even if it has\nbeen opened. Support reviews the evidence and determines whether a replacement or\nrefund is appropriate. The assistant cannot approve a return, replacement or refund."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 14727,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "03",
+      "input": "My lamp arrived broken yesterday and I opened it. Can you help?",
+      "expectedFacts": "Contact support within seven calendar days; opened defect exception; offer reviewed ticket, no approval",
+      "goldSources": [
+        "RET-02",
+        "SUP-02"
+      ],
+      "turns": [
+        {
+          "question": "My lamp arrived broken yesterday and I opened it. Can you help?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "Opened products cannot be returned for change of mind. If a product arrives defective or damaged, contact support within seven calendar days after delivery, even if it has been opened.",
+          "durationMs": 22595,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "0e2b489e-c096-47fd-b74f-28811521c830",
+              "messageId": "07667608-4370-4568-a6da-dcf7b8bc62a6",
+              "documentTitle": "Returns Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "RET-02",
+              "quote": "RET-02 - Opened products and defects",
+              "claim": "Opened products cannot be returned for change of mind. If a product arrives defective or damaged, contact support within seven calendar days after delivery, even if it has been opened.",
+              "available": true,
+              "text": "### RET-02 - Opened products and defects\nOpened products cannot be returned for change of mind. If a product arrives defective\nor damaged, contact support within seven calendar days after delivery, even if it has\nbeen opened. Support reviews the evidence and determines whether a replacement or\nrefund is appropriate. The assistant cannot approve a return, replacement or refund."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 22595,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "04",
+      "input": "Can I return an unopened item 45 days after delivery?",
+      "expectedFacts": "Outside documented 30-day standard window; do not invent extension",
+      "goldSources": [
+        "RET-01"
+      ],
+      "turns": [
+        {
+          "question": "Can I return an unopened item 45 days after delivery?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "No, unopened, non-defective products may be returned within 30 calendar days after delivery.",
+          "durationMs": 17589,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "4e559fbf-6dd3-4c00-a4e8-c7657d6fa431",
+              "messageId": "f2369f24-3ad5-4eb1-b5be-23251560912b",
+              "documentTitle": "Returns Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "RET-01",
+              "quote": "Unopened, non-defective products may be returned within 30 calendar days after\ndelivery.",
+              "claim": "No, unopened, non-defective products may be returned within 30 calendar days after delivery.",
+              "available": true,
+              "text": "### RET-01 - Standard return window\nUnopened, non-defective products may be returned within 30 calendar days after\ndelivery. A receipt or order confirmation is required. Products must include their\noriginal packaging and accessories. Gift cards are not returnable."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 17589,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "05",
+      "input": "Is a receipt needed for a return?",
+      "expectedFacts": "Receipt or order confirmation required",
+      "goldSources": [
+        "RET-01"
+      ],
+      "turns": [
+        {
+          "question": "Is a receipt needed for a return?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "A receipt or order confirmation is required.",
+          "durationMs": 15712,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "1b6522c2-d3b6-42ba-8253-50d14e47b8ed",
+              "messageId": "fa60d776-24fc-4f73-bbc7-7808091c4c0c",
+              "documentTitle": "Returns Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "RET-01",
+              "quote": "Unopened, non-defective products may be returned within 30 calendar days after\ndelivery.",
+              "claim": "A receipt or order confirmation is required.",
+              "available": true,
+              "text": "### RET-01 - Standard return window\nUnopened, non-defective products may be returned within 30 calendar days after\ndelivery. A receipt or order confirmation is required. Products must include their\noriginal packaging and accessories. Gift cards are not returnable."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 15712,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "06",
+      "input": "Who pays shipping for a change-of-mind return?",
+      "expectedFacts": "Customer pays, assuming eligible return",
+      "goldSources": [
+        "RET-03"
+      ],
+      "turns": [
+        {
+          "question": "Who pays shipping for a change-of-mind return?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "Customers pay return shipping for eligible change-of-mind returns.",
+          "durationMs": 18705,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "ba9bc3f8-d4da-4af6-9e92-a721979f01f4",
+              "messageId": "758e9f07-ea4c-49ce-ad4c-b2b81787faaf",
+              "documentTitle": "Returns Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "RET-03",
+              "quote": "Customers pay return shipping for eligible change-of-mind returns.",
+              "claim": "Customers pay return shipping for eligible change-of-mind returns.",
+              "available": true,
+              "text": "### RET-03 - Return shipping and refund timing\nCustomers pay return shipping for eligible change-of-mind returns. Haven pays return\nshipping for an approved defective or damaged-item return. After an eligible returned\nproduct is received and inspected, the refund is issued to the original payment method\nwithin five to ten business days. The refund is not promised within five to ten days of\nthe initial request."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 18705,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "07",
+      "input": "When does my refund arrive after I ask for it?",
+      "expectedFacts": "Five to ten business days after receipt and inspection of eligible return, not after request",
+      "goldSources": [
+        "RET-03"
+      ],
+      "turns": [
+        {
+          "question": "When does my refund arrive after I ask for it?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "The refund is not promised within five to ten days of the initial request.",
+          "durationMs": 22821,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "5cadafa4-2019-475e-b6f9-77114eceaed3",
+              "messageId": "1a8cd06a-57fc-4483-89a5-0257aaeed571",
+              "documentTitle": "Returns Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "RET-03",
+              "quote": "The refund is not promised within five to ten days of\nthe initial request.",
+              "claim": "The refund is not promised within five to ten days of the initial request.",
+              "available": true,
+              "text": "### RET-03 - Return shipping and refund timing\nCustomers pay return shipping for eligible change-of-mind returns. Haven pays return\nshipping for an approved defective or damaged-item return. After an eligible returned\nproduct is received and inspected, the refund is issued to the original payment method\nwithin five to ten business days. The refund is not promised within five to ten days of\nthe initial request."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 22821,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "08",
+      "input": "What is standard shipping on a PKR 4,999 order?",
+      "expectedFacts": "PKR 250",
+      "goldSources": [
+        "SHIP-01"
+      ],
+      "turns": [
+        {
+          "question": "What is standard shipping on a PKR 4,999 order?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "PKR 250",
+          "durationMs": 23355,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "cf068f07-d7b8-48e2-af68-306ed87b7b28",
+              "messageId": "8ba932c5-18cd-4259-8032-90a0f4661ee6",
+              "documentTitle": "Delivery Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "SHIP-01",
+              "quote": "Haven delivers only within Pakistan. Standard shipping costs PKR 250 for an order below\nPKR 5,000 and is free for an order of PKR 5,000 or more.",
+              "claim": "PKR 250",
+              "available": true,
+              "text": "### SHIP-01 - Delivery regions and charges\nHaven delivers only within Pakistan. Standard shipping costs PKR 250 for an order below\nPKR 5,000 and is free for an order of PKR 5,000 or more. Express shipping costs PKR 600\nregardless of order value."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 23355,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "09",
+      "input": "My order is exactly PKR 5,000. Is standard shipping free?",
+      "expectedFacts": "Yes, threshold is inclusive",
+      "goldSources": [
+        "SHIP-01"
+      ],
+      "turns": [
+        {
+          "question": "My order is exactly PKR 5,000. Is standard shipping free?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "Yes, standard shipping is free for orders of PKR 5,000 or more.",
+          "durationMs": 20109,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "8b0c904b-036c-4393-b58d-51f0c33bd875",
+              "messageId": "008a19c3-22fb-4838-a6a2-88a6551bb645",
+              "documentTitle": "Delivery Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "SHIP-01",
+              "quote": "Haven delivers only within Pakistan. Standard shipping costs PKR 250 for an order below\nPKR 5,000 and is free for an order of PKR 5,000 or more.",
+              "claim": "Yes, standard shipping is free for orders of PKR 5,000 or more.",
+              "available": true,
+              "text": "### SHIP-01 - Delivery regions and charges\nHaven delivers only within Pakistan. Standard shipping costs PKR 250 for an order below\nPKR 5,000 and is free for an order of PKR 5,000 or more. Express shipping costs PKR 600\nregardless of order value."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 20110,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "10",
+      "input": "Is express shipping free on a PKR 10,000 order?",
+      "expectedFacts": "No; PKR 600 regardless of order value",
+      "goldSources": [
+        "SHIP-01"
+      ],
+      "turns": [
+        {
+          "question": "Is express shipping free on a PKR 10,000 order?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "No, express shipping costs PKR 600 regardless of order value.",
+          "durationMs": 22453,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "d06a6b96-30ea-4fdc-8f28-ff59b9af9f8c",
+              "messageId": "9d66d431-d56b-4d4c-88f9-99ab4e062c55",
+              "documentTitle": "Delivery Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "SHIP-01",
+              "quote": "Haven delivers only within Pakistan. Standard shipping costs PKR 250 for an order below\nPKR 5,000 and is free for an order of PKR 5,000 or more. Express shipping costs PKR 600\nregardless of order value.",
+              "claim": "No, express shipping costs PKR 600 regardless of order value.",
+              "available": true,
+              "text": "### SHIP-01 - Delivery regions and charges\nHaven delivers only within Pakistan. Standard shipping costs PKR 250 for an order below\nPKR 5,000 and is free for an order of PKR 5,000 or more. Express shipping costs PKR 600\nregardless of order value."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 22453,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "11",
+      "input": "How long does standard delivery take?",
+      "expectedFacts": "Processing one to two business days before dispatch; then three to five after dispatch; estimate not guarantee",
+      "goldSources": [
+        "SHIP-02"
+      ],
+      "turns": [
+        {
+          "question": "How long does standard delivery take?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "three to five business days",
+          "durationMs": 16252,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "bfeadfa3-63dc-436f-b803-518f911d2c09",
+              "messageId": "686d7c04-1056-4aa6-bf96-858d4c1f4add",
+              "documentTitle": "Delivery Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "SHIP-02",
+              "quote": "Standard delivery\nusually takes three to five business days after dispatch.",
+              "claim": "three to five business days",
+              "available": true,
+              "text": "### SHIP-02 - Processing and estimated delivery\nOrders are processed within one to two business days before dispatch. Standard delivery\nusually takes three to five business days after dispatch. Express delivery usually\ntakes one to two business days after dispatch. Business days are Monday through Friday,\nexcluding public holidays. Delivery estimates are not guaranteed arrival dates."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 16252,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "12",
+      "input": "Do you deliver to Dubai?",
+      "expectedFacts": "No; Pakistan only",
+      "goldSources": [
+        "SHIP-01"
+      ],
+      "turns": [
+        {
+          "question": "Do you deliver to Dubai?",
+          "state": "failed",
+          "errorCode": "invalid_citations",
+          "kind": null,
+          "text": null,
+          "durationMs": 23445,
+          "storedQuoteChecksPassed": true,
+          "sources": []
+        }
+      ],
+      "totalDurationMs": 23445,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "13",
+      "input": "Does the warranty cover spilling water on my lamp?",
+      "expectedFacts": "Liquid damage excluded; do not approve claim",
+      "goldSources": [
+        "WAR-01"
+      ],
+      "turns": [
+        {
+          "question": "Does the warranty cover spilling water on my lamp?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "Accidental damage, including spilling water, is excluded from the warranty.",
+          "durationMs": 24634,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "2e693812-30fc-457b-84c9-8b5e8d492a71",
+              "messageId": "a132588c-36c4-4937-97c2-4b0b541f5e72",
+              "documentTitle": "Warranty Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "WAR-01",
+              "quote": "Accidental damage, liquid damage, unauthorized\nrepairs and normal cosmetic wear are excluded.",
+              "claim": "Accidental damage, including spilling water, is excluded from the warranty.",
+              "available": true,
+              "text": "### WAR-01 - Coverage\nHaven electronics include a 12-month limited warranty from delivery covering\nmanufacturing defects under normal use. Accidental damage, liquid damage, unauthorized\nrepairs and normal cosmetic wear are excluded. A receipt or order confirmation is\nrequired for a claim. Accessories are covered only if their product document explicitly\nsays so."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 24634,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "14",
+      "input": "How long is the electronics warranty?",
+      "expectedFacts": "12 months from delivery; manufacturing defects under normal use",
+      "goldSources": [
+        "WAR-01"
+      ],
+      "turns": [
+        {
+          "question": "How long is the electronics warranty?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "12 months",
+          "durationMs": 15908,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "bf8f0e44-73ab-44dc-8474-b5a7af806255",
+              "messageId": "d3f81c29-71b6-441c-a73a-b8b2400620e1",
+              "documentTitle": "Warranty Policy",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "WAR-01",
+              "quote": "Haven electronics include a 12-month limited warranty from delivery covering\nmanufacturing defects under normal use.",
+              "claim": "12 months",
+              "available": true,
+              "text": "### WAR-01 - Coverage\nHaven electronics include a 12-month limited warranty from delivery covering\nmanufacturing defects under normal use. Accidental damage, liquid damage, unauthorized\nrepairs and normal cosmetic wear are excluded. A receipt or order confirmation is\nrequired for a claim. Accessories are covered only if their product document explicitly\nsays so."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 15908,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "15",
+      "input": "Does the Glow lamp come with a wall charger?",
+      "expectedFacts": "USB-C cable included; wall adapter not included",
+      "goldSources": [
+        "PROD-01"
+      ],
+      "turns": [
+        {
+          "question": "Does the Glow lamp come with a wall charger?",
+          "state": "failed",
+          "errorCode": "invalid_citations",
+          "kind": null,
+          "text": null,
+          "durationMs": 33719,
+          "storedQuoteChecksPassed": true,
+          "sources": []
+        }
+      ],
+      "totalDurationMs": 33719,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "16",
+      "input": "Can I put the Trail Bottle in my dishwasher?",
+      "expectedFacts": "No; hand wash; not dishwasher-safe",
+      "goldSources": [
+        "PROD-02"
+      ],
+      "turns": [
+        {
+          "question": "Can I put the Trail Bottle in my dishwasher?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "no",
+          "durationMs": 31577,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "8ee317de-8271-4b0c-852d-42a7a3cc77f7",
+              "messageId": "23644cf9-6dca-4df3-ba0c-6fedd2c955b4",
+              "documentTitle": "Product Guide",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "PROD-02",
+              "quote": "it is\nnot dishwasher-safe",
+              "claim": "no",
+              "available": true,
+              "text": "### PROD-02 - Trail Bottle\nThe Trail Bottle holds 750 mL and is made of stainless steel. Wash it by hand; it is\nnot dishwasher-safe or microwave-safe. The guide does not specify how long it keeps\nliquids hot or cold. Replacement lids are not described in the available documents."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 31577,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "17",
+      "input": "What hours can I reach a person, and when should I expect a first reply?",
+      "expectedFacts": "Weekdays 9:00–18:00 PKT excluding holidays; target two business days; no resolution guarantee",
+      "goldSources": [
+        "SUP-01"
+      ],
+      "turns": [
+        {
+          "question": "What hours can I reach a person, and when should I expect a first reply?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "Human support hours are Monday through Friday, 9:00–18:00 Pakistan Standard Time, excluding public holidays.\n\nThe target for a first reply is within two business days.",
+          "durationMs": 36550,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "8aa2fcb9-a865-4012-a829-952c32577660",
+              "messageId": "6d0aea66-2540-4775-8b1a-c8add3aee9a6",
+              "documentTitle": "Support and Privacy FAQ",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "SUP-01",
+              "quote": "Human support hours are Monday through Friday, 9:00–18:00 Pakistan Standard Time,\nexcluding public holidays.",
+              "claim": "Human support hours are Monday through Friday, 9:00–18:00 Pakistan Standard Time, excluding public holidays.",
+              "available": true,
+              "text": "### SUP-01 - Human support\nHuman support hours are Monday through Friday, 9:00–18:00 Pakistan Standard Time,\nexcluding public holidays. The target for a first reply is within two business days.\nThis is a target, not a guaranteed resolution time. A local support ticket can be\nsubmitted at any time; creating one does not mean an email has been sent."
+            },
+            {
+              "id": "bf1e59c3-8937-4ad0-a391-a62721c47159",
+              "messageId": "6d0aea66-2540-4775-8b1a-c8add3aee9a6",
+              "documentTitle": "Support and Privacy FAQ",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "SUP-01",
+              "quote": "This is a target, not a guaranteed resolution time.",
+              "claim": "The target for a first reply is within two business days.",
+              "available": true,
+              "text": "### SUP-01 - Human support\nHuman support hours are Monday through Friday, 9:00–18:00 Pakistan Standard Time,\nexcluding public holidays. The target for a first reply is within two business days.\nThis is a target, not a guaranteed resolution time. A local support ticket can be\nsubmitted at any time; creating one does not mean an email has been sent."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 36550,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "18",
+      "input": "Where is order HG-2041 right now?",
+      "expectedFacts": "No live order access; offer ticket/tracking-link guidance; no invented location",
+      "goldSources": [
+        "SHIP-03",
+        "SUP-03"
+      ],
+      "turns": [
+        {
+          "question": "Where is order HG-2041 right now?",
+          "state": "failed",
+          "errorCode": "invalid_model_output",
+          "kind": null,
+          "text": null,
+          "durationMs": 26578,
+          "storedQuoteChecksPassed": true,
+          "sources": []
+        }
+      ],
+      "totalDurationMs": 26578,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "19",
+      "input": "Does Glow work with Apple HomeKit?",
+      "expectedFacts": "Compatibility not stated; do not infer yes or no from absence; offer human help",
+      "goldSources": [
+        "PROD-01"
+      ],
+      "turns": [
+        {
+          "question": "Does Glow work with Apple HomeKit?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "No smart-home compatibility is stated in this guide.",
+          "durationMs": 15808,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "2f19021a-4d73-4f2b-8e38-9336c1debdc9",
+              "messageId": "debf99dc-5dcf-496a-9d10-c661d970a32d",
+              "documentTitle": "Product Guide",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "PROD-01",
+              "quote": "No smart-home compatibility is stated in this guide.",
+              "claim": "No smart-home compatibility is stated in this guide.",
+              "available": true,
+              "text": "### PROD-01 - Glow Desk Lamp\nThe Glow Desk Lamp has three brightness levels and a USB-C power input. A USB-C cable\nis included; a wall power adapter is not included. Use it indoors in a dry area. It is\nnot waterproof. The lamp has no battery and must remain connected to a suitable power\nsource. No smart-home compatibility is stated in this guide."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 15808,
+      "semanticGrade": "pending_manual_review"
+    },
+    {
+      "id": "20",
+      "input": "How long will Trail Bottle keep tea hot?",
+      "expectedFacts": "Duration not specified; do not invent hours",
+      "goldSources": [
+        "PROD-02"
+      ],
+      "turns": [
+        {
+          "question": "How long will Trail Bottle keep tea hot?",
+          "state": "completed",
+          "errorCode": null,
+          "kind": "answered",
+          "text": "The guide does not specify how long it keeps liquids hot or cold.",
+          "durationMs": 18162,
+          "storedQuoteChecksPassed": true,
+          "sources": [
+            {
+              "id": "9263386c-d32b-477e-ae8f-80295a48590e",
+              "messageId": "6e523dc3-3a25-408f-85af-4a7c6a603326",
+              "documentTitle": "Product Guide",
+              "version": "1.0",
+              "effectiveDate": "2026-10-01T05:00:00+05:00",
+              "page": 1,
+              "lineStart": null,
+              "lineEnd": null,
+              "sourceKey": "PROD-02",
+              "quote": "The guide does not specify how long it keeps\nliquids hot or cold.",
+              "claim": "The guide does not specify how long it keeps liquids hot or cold.",
+              "available": true,
+              "text": "### PROD-02 - Trail Bottle\nThe Trail Bottle holds 750 mL and is made of stainless steel. Wash it by hand; it is\nnot dishwasher-safe or microwave-safe. The guide does not specify how long it keeps\nliquids hot or cold. Replacement lids are not described in the available documents."
+            }
+          ]
+        }
+      ],
+      "totalDurationMs": 18162,
+      "semanticGrade": "pending_manual_review"
+    }
+  ]
+}

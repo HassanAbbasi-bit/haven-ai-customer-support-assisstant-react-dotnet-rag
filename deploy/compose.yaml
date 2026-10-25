@@ -1,0 +1,39 @@
+name: haven-support-dev
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-CU24-GDR2-ubuntu-22.04@sha256:d01cc45e6b920eff17abc60295b8748821e09b678f0fcf54959ef37406b80203
+    platform: linux/amd64
+    environment:
+      ACCEPT_EULA: ${ACCEPT_EULA:?Set ACCEPT_EULA=Y after reviewing the SQL Server license}
+      MSSQL_PID: Developer
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD:?Set a strong local SQL password in deploy/.env}
+      MSSQL_MEMORY_LIMIT_MB: '2048'
+    ports:
+      - '127.0.0.1:1433:1433'
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - '/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "$$MSSQL_SA_PASSWORD" -C -Q "SELECT 1" -b -o /dev/null'
+      interval: 15s
+      timeout: 10s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant:v1.19.0@sha256:057ee3a8da769fe7310dd3537b4dc7583bf87a95ce8ac43c0af5a46bc580d1fc
+    ports:
+      - '127.0.0.1:6333:6333'
+      - '127.0.0.1:6334:6334'
+    volumes:
+      - qdrant-data:/qdrant/storage
+    restart: unless-stopped
+    # The stock image is not assumed to contain curl/wget. The provider probe
+    # verifies readiness using a real gRPC collection/upsert/filter round trip.
+
+volumes:
+  sqlserver-data:
+  qdrant-data:

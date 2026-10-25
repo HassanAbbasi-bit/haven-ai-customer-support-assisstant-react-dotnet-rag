@@ -1,0 +1,53 @@
+{
+  "id": "32be24b8-f295-4be7-a49c-5558a44cea00",
+  "title": "Can I return an opened item?",
+  "messages": [
+    {
+      "id": "bbd39b17-2423-4d5b-96c8-7a51dae17b4d",
+      "requestId": "8e9a9de1-806e-48ab-8f31-86d4da654bdc",
+      "role": "user",
+      "text": "Can I return an opened item?",
+      "kind": "answered",
+      "createdAt": "2026-10-24T15:06:54.9455082+05:00",
+      "citations": [],
+      "feedback": null
+    },
+    {
+      "id": "3e043530-0412-4d9e-9ed3-5a5896041751",
+      "requestId": "8e9a9de1-806e-48ab-8f31-86d4da654bdc",
+      "role": "assistant",
+      "text": "Opened products cannot be returned for change of mind. If a product arrives defective or damaged, contact support within seven calendar days after delivery, even if it has been opened. Support reviews the evidence and determines whether a replacement or refund is appropriate. The assistant cannot approve a return, replacement or refund.",
+      "kind": "answered",
+      "createdAt": "2026-10-24T15:07:05.1320585+05:00",
+      "citations": [
+        {
+          "id": "4d043333-dab4-455e-bacf-6ce9a1c7e67b",
+          "messageId": "3e043530-0412-4d9e-9ed3-5a5896041751",
+          "documentTitle": "Returns Policy",
+          "version": "1.0",
+          "effectiveDate": "2026-10-01T05:00:00+05:00",
+          "page": 1,
+          "lineStart": null,
+          "lineEnd": null,
+          "sourceKey": "RET-02",
+          "quote": "Opened products cannot be returned for change of mind. If a product arrives defective\nor damaged, contact support within seven calendar days after delivery, even if it has\nbeen opened. Support reviews the evidence and determines whether a replacement or\nrefund is appropriate. The assistant cannot approve a return, replacement or refund.",
+          "claim": "Opened products cannot be returned for change of mind. If a product arrives defective or damaged, contact support within seven calendar days after delivery, even if it has been opened. Support reviews the evidence and determines whether a replacement or refund is appropriate. The assistant cannot approve a return, replacement or refund.",
+          "available": true,
+          "text": "### RET-02 - Opened products and defects\nOpened products cannot be returned for change of mind. If a product arrives defective\nor damaged, contact support within seven calendar days after delivery, even if it has\nbeen opened. Support reviews the evidence and determines whether a replacement or\nrefund is appropriate. The assistant cannot approve a return, replacement or refund."
+        }
+      ],
+      "feedback": null
+    }
+  ],
+  "requests": [
+    {
+      "id": "8e9a9de1-806e-48ab-8f31-86d4da654bdc",
+      "state": "completed",
+      "stage": "Complete",
+      "errorCode": null,
+      "question": "Can I return an opened item?",
+      "createdAt": "2026-10-24T15:06:54.9454168+05:00",
+      "durationMs": 10152
+    }
+  ]
+}

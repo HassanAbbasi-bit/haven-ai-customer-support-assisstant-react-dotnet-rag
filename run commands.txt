@@ -1,0 +1,26 @@
+Start Docker Desktop and Ollama, then open PowerShell.
+1. Start SQL Server and Qdrant
+cd "H:\Ai Customer Support Assisstant"
+.\scripts\Start-Local.ps1 -Mode Services
+The first run may take time while Docker downloads the images. Wait for it to finish.
+
+2. Start the backend in the same terminal
+.\scripts\Start-Local.ps1 -Mode Api
+Keep this terminal open.
+
+3. Open a second PowerShell terminal and start the website
+cd "H:\Ai Customer Support Assisstant"
+.\scripts\Start-Local.ps1 -Mode Web
+Keep this terminal open too.
+
+4. Open the app
+http://127.0.0.1:5173
+The functional app includes AI policy chat with stored PDF sources, accounts, feedback, reviewed local tickets, and protected admin knowledge/inbox/dashboard screens.
+After a reboot, warm the model before the first chat (another terminal):
+.\scripts\Warm-LocalAi.ps1
+Administrator credentials: .local/admin-credentials.txt (keep private).
+This workspace is already initialized. A fresh database needs -Mode Initialize before -Mode Api.
+See README.md and docs/reports/functional-implementation.md for current checks and remaining work.
+To check the supporting services, run this in another terminal:
+cd "H:\Ai Customer Support Assisstant"
+.\scripts\Start-Local.ps1 -Mode Verify

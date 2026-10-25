@@ -1,0 +1,12 @@
+{
+  "ConnectionStrings": {
+    "SqlServer": ""
+  },
+  "Providers": {
+    "OllamaBaseUrl": "http://127.0.0.1:11434",
+    "ChatModel": "llama3.2:3b",
+    "EmbeddingModel": "all-minilm:22m",
+    "QdrantHost": "127.0.0.1",
+    "QdrantGrpcPort": 6334
+  }
+}

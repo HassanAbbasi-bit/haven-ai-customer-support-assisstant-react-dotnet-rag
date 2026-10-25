@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <ProjectReference Include="..\HavenSupport.Application\HavenSupport.Application.csproj" />
+    <ProjectReference Include="..\HavenSupport.Infrastructure\HavenSupport.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\docs\fixtures\knowledge-base.md" LogicalName="HavenSupport.PolicyFixtures.md" />
+  </ItemGroup>
+
+</Project>

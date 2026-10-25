@@ -1,0 +1,31 @@
+{
+  "executedAtUtc": "2026-10-17T17:16:58.3492809+00:00",
+  "scope": "M0 providers only",
+  "results": [
+    {
+      "Name": "pdf",
+      "Status": "passed",
+      "Detail": "Two-page text PDF generated and extracted; source keys preserved on pages 1 and 2."
+    },
+    {
+      "Name": "sql",
+      "Status": "blocked",
+      "Detail": "Set ConnectionStrings__SqlServer; no SQL secret is configured."
+    },
+    {
+      "Name": "qdrant",
+      "Status": "blocked",
+      "Detail": "Qdrant gRPC is unreachable; start the supporting service."
+    },
+    {
+      "Name": "ollama-chat",
+      "Status": "passed",
+      "Detail": "IChatClient structured JSON validated; pre-canceled and in-flight cancellation passed; num_ctx=2048, num_gpu=0."
+    },
+    {
+      "Name": "ollama-embeddings",
+      "Status": "passed",
+      "Detail": "IEmbeddingGenerator: two finite nonzero vectors, dimension=384; pre-canceled call passed."
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+AI Customer Support Assistant: Built a RAG-powered application using ASP.NET Core, React, Ollama, and Qdrant to answer customer questions from business documents, provide source citations, and draft support tickets.

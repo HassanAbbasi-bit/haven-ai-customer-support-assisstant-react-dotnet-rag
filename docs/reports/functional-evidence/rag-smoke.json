@@ -1,0 +1,53 @@
+{
+  "id": "88592129-b1f6-4951-aa7f-97e3ac2f91fd",
+  "title": "Can I return an opened item?",
+  "messages": [
+    {
+      "id": "312f220f-c4c8-4008-b7f1-423131d5302a",
+      "requestId": "7ab0c098-8bca-416e-80d2-5300d118fd3e",
+      "role": "user",
+      "text": "Can I return an opened item?",
+      "kind": "answered",
+      "createdAt": "2026-10-19T23:15:11.8970658+05:00",
+      "citations": [],
+      "feedback": null
+    },
+    {
+      "id": "0214326e-da38-4a41-b038-de87be0bc85a",
+      "requestId": "7ab0c098-8bca-416e-80d2-5300d118fd3e",
+      "role": "assistant",
+      "text": "Opened products cannot be returned for change of mind. If a product arrives defective or damaged, contact support within seven calendar days after delivery, even if it has been opened.",
+      "kind": "answered",
+      "createdAt": "2026-10-19T23:16:05.7354437+05:00",
+      "citations": [
+        {
+          "id": "8e6ea7fe-7e61-443a-b6d9-adf07f38454a",
+          "messageId": "0214326e-da38-4a41-b038-de87be0bc85a",
+          "documentTitle": "Returns Policy",
+          "version": "1.0",
+          "effectiveDate": "2026-10-01T05:00:00+05:00",
+          "page": 1,
+          "lineStart": null,
+          "lineEnd": null,
+          "sourceKey": "RET-02",
+          "quote": "Opened products cannot be returned for change of mind. If a product arrives defective\nor damaged, contact support within seven calendar days after delivery, even if it has\nbeen opened.",
+          "claim": "Opened products cannot be returned for change of mind. If a product arrives defective or damaged, contact support within seven calendar days after delivery, even if it has been opened.",
+          "available": true,
+          "text": "### RET-02 - Opened products and defects\nOpened products cannot be returned for change of mind. If a product arrives defective\nor damaged, contact support within seven calendar days after delivery, even if it has\nbeen opened. Support reviews the evidence and determines whether a replacement or\nrefund is appropriate. The assistant cannot approve a return, replacement or refund."
+        }
+      ],
+      "feedback": null
+    }
+  ],
+  "requests": [
+    {
+      "id": "7ab0c098-8bca-416e-80d2-5300d118fd3e",
+      "state": "completed",
+      "stage": "Complete",
+      "errorCode": null,
+      "question": "Can I return an opened item?",
+      "createdAt": "2026-10-19T23:15:11.8588568+05:00",
+      "durationMs": 53871
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/HavenSupport.Api/HavenSupport.Api.csproj" />
+    <Project Path="src/HavenSupport.Application/HavenSupport.Application.csproj" />
+    <Project Path="src/HavenSupport.Domain/HavenSupport.Domain.csproj" />
+    <Project Path="src/HavenSupport.Infrastructure/HavenSupport.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/HavenSupport.Evaluation/HavenSupport.Evaluation.csproj" />
+    <Project Path="tests/HavenSupport.IntegrationTests/HavenSupport.IntegrationTests.csproj" />
+    <Project Path="tests/HavenSupport.UnitTests/HavenSupport.UnitTests.csproj" />
+  </Folder>
+</Solution>

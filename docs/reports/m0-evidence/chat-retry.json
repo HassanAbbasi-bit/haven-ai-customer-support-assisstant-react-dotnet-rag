@@ -1,0 +1,11 @@
+{
+  "executedAtUtc": "2026-10-17T16:09:47.8962157+00:00",
+  "scope": "M0 providers only",
+  "results": [
+    {
+      "Name": "ollama-chat",
+      "Status": "passed",
+      "Detail": "IChatClient structured JSON validated; pre-canceled and in-flight cancellation passed; num_ctx=2048, num_gpu=0."
+    }
+  ]
+}

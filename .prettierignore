@@ -1,0 +1,10 @@
+**/bin
+**/obj
+**/node_modules
+**/dist
+**/packages.lock.json
+**/package-lock.json
+docs
+README.md
+Name-On-Github.txt
+*.slnx

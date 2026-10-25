@@ -1,0 +1,22 @@
+{
+  "scope": "M0 spike choices; not a validated RAG model selection",
+  "ollamaVersionObserved": "0.40.4",
+  "chat": {
+    "name": "llama3.2:3b",
+    "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "bytes": 2019393189,
+    "quantization": "Q4_K_M",
+    "advertisedContextTokens": 131072,
+    "probeContextTokens": 2048,
+    "probeGpuLayers": 0,
+    "license": "Llama 3.2 Community License; review https://ollama.com/library/llama3.2:3b before redistribution"
+  },
+  "embedding": {
+    "name": "all-minilm:22m",
+    "digest": "1b226e2802dbb772b5fc32a58f103ca1804ef7501331012de126ab22f67475ef",
+    "bytes": 45960996,
+    "observedDimensions": 384,
+    "advertisedContextTokens": 512,
+    "license": "Apache-2.0 model card; inspect bundled Ollama license and upstream card before redistribution"
+  }
+}

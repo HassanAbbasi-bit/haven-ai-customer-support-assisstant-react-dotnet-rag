@@ -1,0 +1,18 @@
+[
+  {
+    "project": "HavenSupport.UnitTests",
+    "total": "5",
+    "passed": "5",
+    "failed": "0",
+    "outcome": "Completed",
+    "finished": "2026-10-17T22:17:09.5296448+05:00"
+  },
+  {
+    "project": "HavenSupport.IntegrationTests",
+    "total": "2",
+    "passed": "2",
+    "failed": "0",
+    "outcome": "Completed",
+    "finished": "2026-10-17T22:17:08.2410781+05:00"
+  }
+]

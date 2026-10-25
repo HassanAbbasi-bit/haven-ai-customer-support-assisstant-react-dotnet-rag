@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><title>Haven responsive verification</title></head><body><h1>Responsive verification</h1><p>Temporary local test harness.</p><iframe title="320 pixel layout" src="/" width="320" height="950"></iframe><iframe title="375 pixel layout" src="/" width="375" height="950"></iframe><iframe title="768 pixel layout" src="/" width="768" height="950"></iframe><iframe title="1024 pixel layout" src="/" width="1024" height="950"></iframe><iframe title="1440 pixel layout" src="/" width="1440" height="1150"></iframe></body></html>
+<script>
+for (const frame of document.querySelectorAll('iframe')) {
+  frame.addEventListener('load', () => {
+    const report = () => {
+      const d = frame.contentDocument; const w = frame.contentWindow;
+      const output = document.createElement('pre');
+      const result = { width: w.innerWidth, scrollWidth: d.documentElement.scrollWidth, loadedCards: d.querySelectorAll('.policy-card').length, columns: w.getComputedStyle(d.querySelector('.policy-grid')).gridTemplateColumns, overflow: [...d.querySelectorAll('main *')].filter(e => e.getBoundingClientRect().right > w.innerWidth + 1).map(e => e.className).slice(0, 8) };
+      output.textContent = JSON.stringify(result); frame.before(output);
+    };
+    const timer = setInterval(() => { if(frame.contentDocument.querySelectorAll('.policy-card').length) { clearInterval(timer); report(); } }, 100);
+    setTimeout(() => clearInterval(timer), 10000);
+  });
+}
+</script>
